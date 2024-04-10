@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emoji</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('edata.gif');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+    }
+    #staff {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoom 10s infinite alternate;
+    }
+    @keyframes zoom {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+    .fallingImage {
+        position: absolute;
+        pointer-events: none;
+    }
+
+</style>
+</head>
+<body>
+
+<script>
+    function playAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getRandomImage() {
+        var images = ['e1.png', 'e2.png', 'e3.png', 'e4.png', 'e5.png', 'e6.png', 'e7.png', 'e8.png', 'e9.png', 'e10.png', 'e11.png', 'e12.png'];
+        return images[getRandomInt(0, images.length - 1)];
+    }
+
+    function createFallingImage(x, y) {
+        var image = document.createElement('img');
+        var randomImage = getRandomImage();
+        image.src = randomImage;
+        image.classList.add('fallingImage');
+        image.style.left = x + 'px';
+        image.style.top = y + 'px';
+        image.style.transition = 'top 4s linear';
+        image.onclick = function() {
+            this.parentNode.removeChild(this);
+            playAudio('audio' + randomImage.slice(-5, -4));
+        };
+        document.body.appendChild(image);
+        setTimeout(function() {
+            image.style.top = window.innerHeight + 'px';
+        }, 100);
+    }
+
+    document.addEventListener('click', function(event) {
+        createFallingImage(event.clientX, event.clientY);
+        updateText();
+    });
+
+</script>
+
+</body>
+</html>
+ 

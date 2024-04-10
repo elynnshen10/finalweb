@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>part4.web.</title>
+        <meta
+          name="elynn"
+          content="this is an art assignment">
+        
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>背景图片网页</title>
+            <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        @font-face {
+            font-family: 'PixelFont';
+            src: url('像素.TTF') format('truetype');
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+          
+        }
+        
+        #pixelText {
+            font-family: 'PixelFont', sans-serif;
+            color: rgb(32, 138, 164);
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px; /* 根据需要调整字体大小 */
+            opacity: 0;
+            z-index: 2; /* 确保文字在图片上方 */
+        }
+        
+        #backgroundImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('白.jpg');
+            background-size: cover;
+            opacity: 0;
+            z-index: 1; /* 确保图片在文字下方 */
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="4.1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="pixelText">CLOSE YOUR EYES FOR 50 SECONDS</div>
+    <div id="backgroundImage"></div>
+
+    <script>
+        window.onload = function() {
+            var pixelText = document.getElementById('pixelText');
+            var backgroundImage = document.getElementById('backgroundImage');
+
+            // 显示文字和图片
+            pixelText.style.opacity = 1;
+            backgroundImage.style.opacity = 1;
+
+            // 5秒后隐藏文字
+            setTimeout(function() {
+                pixelText.style.opacity = 0;
+            }, 10000);
+
+            // 17秒后隐藏图片
+            setTimeout(function() {
+                backgroundImage.style.opacity = 0;
+            }, 50000);
+        }
+    </script>
+
+    <body>
+        <div class="banner">
+            <video autoplay="" muted="" loop="">
+                <source src="bg.mp4" type="video/mp4">
+            </video>
+            <div id="bg"></div>
+            <script type="text/javascript">
+                let bg = document.querySelector('#bg');
+                window.addEventListener('scroll', function(){
+                    let value = window.scrollY;
+                    bg.style.backgroundSize = 1000 + value*0.8 +"px";
+                })
+            </script>
+
+    <div id="image-container">
+       <img id="image" src="your-image.jpg" >
+    </div>
+
+    <script>
+     const image = document.getElementById('image');
+     let blurAmount = 10; // 初始模糊程度
+
+     // 监听鼠标滚轮事件
+     window.addEventListener('wheel', function(event) {
+        // 判断滚轮滚动的方向
+        if (event.deltaY < 0) {
+            // 向上滚动，增加模糊程度
+            blurAmount += 1;
+        } else {
+            // 向下滚动，减少模糊程度
+            blurAmount -= 1;
+        }
+
+        // 确保模糊程度在合理范围内
+        blurAmount = Math.max(0, blurAmount);
+        blurAmount = Math.min(20, blurAmount);
+
+        // 应用模糊效果
+        image.style.filter = `blur(${blurAmount}px)`;
+    });
+</script>
+    
+    </body>
+
+    <style>
+
+    </style>
+    
+</html>

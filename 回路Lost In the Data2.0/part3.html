@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Image Scroll</title>
+<style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('黑色河流.gif'); /* 图片路径 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 5000px 3000px; /* 宽度为 800 像素，高度为 600 像素 */
+            height: 0vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+    
+
+
+
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+    }
+    #image-container {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        animation: scrollImage linear 10s forwards;
+
+    }
+    @keyframes scrollImage {
+        from { bottom: 0%; }
+        to { bottom: -152%; }
+    }
+    #image {
+        display: block;
+        margin: auto;
+    }
+    #flashing-image {
+        animation: flash 0.2s infinite alternate; /* 闪烁动画 */
+    }
+
+    @keyframes flash {
+        0% { opacity: 6; } /* 初始状态，完全透明 */
+
+        100% { opacity: 0; } /* 再次变为完全透明 */
+    }
+
+    .video-container {
+        position: absolute;
+        width: 2000px; /* Adjust width as needed */
+        border: 10px solid #fff;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    video {
+        width: 100%; /* Adjust based on the container size */
+        height: auto;
+    }
+
+     button {
+        border: 100px solid rgb(255, 255, 255);
+        background: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        position: fixed;
+        width: 600px; /* 图像的宽度 */
+        height: 200px; /* 图像的高度 */
+        left: 2000px; /* 图像的左侧位置 */
+        top: 1000px; /* 图像的顶部位置 */
+        opacity: 0;
+        z-index: 9999; /* 设置更高的 z-index 值 */
+    }
+
+
+
+</style>
+</head>
+<body>
+    <video id="myVideo" src="拼图扣.mp4" autoplay loop style="width: 10px; height: 10px; position: absolute; left: 10px; top: 750px; z-index: -1;"></video>
+    <audio autoplay loop>
+        <source src="3.1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <img src="heihong.jpg" id="flashing-image" alt="Flashing Image" usemap="#hidden" style="position: absolute; width: 600px; height: 200px; left: 2000px; top: 1000px; ">
+
+    <!-- 透明按钮 -->
+    <button onclick="openPopup1()" style="position: fixed; width: 600px; height: 200px; left: 2000px; top: 1000px; opacity: 0;"></button>
+    <button onclick="openPopup3()" style="position: fixed; width: 300px; left:450px; top:1200px; opacity: 0;"></button>
+    <button onclick="openPopup4()" style="position: fixed; width: 800px; height: 200px; left: 1300px; top: 350px; opacity: 0;"></button>
+    <script>
+        function openPopup1() {
+            // 定义要打开的弹窗的 URL
+            var url = "emoji.html";
+
+            // 定义弹窗的属性
+            var windowFeatures = "width=300, height=500, left=200, bottom=400, top=200, resizable=yes, scrollbars=yes, status=yes";
+
+            // 在新窗口中打开指定 URL，并设置窗口属性
+            window.open(url, "PopupWindow", windowFeatures);
+        }
+
+
+
+        function openPopup3() {
+            // 定义要打开的弹窗的 URL
+            var url = "https://elynnshen10.github.io/10web/";
+
+            // 定义弹窗的属性
+            var windowFeatures = "width=700, height=500, left=100, bottom=300, top=100, resizable=yes, scrollbars=yes, status=yes";
+
+            // 在新窗口中打开指定 URL，并设置窗口属性
+            window.open(url, "PopupWindow", windowFeatures);
+        }
+
+        function openPopup4() {
+            // 定义要打开的弹窗的 URL
+            var url = "part3wenzi.html";
+
+            var windowWidth = 600;
+            var windowHeight = 400;
+            var windowLeft = (window.screen.width - windowWidth) / 2;
+            var windowTop = (window.screen.height - windowHeight) / 2;
+            var windowFeatures = "width=" + windowWidth + ", height=" + windowHeight + ", left=" + windowLeft + ", top=" + windowTop + ", resizable=yes, scrollbars=yes, status=yes";
+
+    // 在新窗口中打开指定 URL，并设置窗口属性
+    window.open(url, "PopupWindow", windowFeatures);
+        }
+
+        function openPopupWithMatchingSize() {
+    // 获取当前页面的宽度和高度
+    var pageWidth = document.documentElement.clientWidth;
+    var pageHeight = document.documentElement.clientHeight;
+
+    // 定义要打开的弹窗的 URL
+    var url = "part3wenzi.html";
+
+    // 使用当前页面的宽度和高度定义弹窗的属性
+    var windowFeatures = "width=" + pageWidth + ", height=" + pageHeight + ", left=200, top=300, resizable=yes, scrollbars=yes, status=yes";
+
+    // 在新窗口中打开指定 URL，并设置窗口属性
+    window.open(url, "PopupWindow", windowFeatures);
+}
+    </script>
+
+    <img src="guyong.gif" position:fixed loop autoplay width="800" height="2500" style="position:fixed; left:-300px; top:1px">
+    <img src="guyong.gif" position:fixed loop autoplay width="800" height="2500" style="position:fixed; left:2800px; top:1px">
+    <img src="鱼.gif" position:fixed loop autoplay width="300" style="position:fixed; left:450px; top:1200px;">
+    <div id="image-container">
+        <img id="image" src="part3.png" alt="Description of the image">
+    </div>
+
+
+    <div id="MyImage" class="video-container" style="top: 20%; left: 20%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="MyImage2" class="video-container" style="top: 80%; left: 40%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="MyImage3" class="video-container" style="top: 50%; left: 85%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="MyImage4" class="video-container" style="top: 30%; left: 60%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="myImage5" class="video-container" style="top: 14%; left: 80%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="myImage6" class="video-container" style="top: 34%; left: 23%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="myImage7" class="video-container" style="top: 74%; left: 33%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+    <div id="myImage8" class="video-container" style="top: 90%; left: 63%; transform: translate(-50%, -50%);">
+        <video autoplay muted playsinline></video>
+    </div>
+
+
+    <img id="myImage" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 20%; left: 20%; transform: translate(-50%, -50%);">
+    <img id="myImage2" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 80%; left: 40%; transform: translate(-50%, -50%);">
+    <img id="myImage3" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 50%; left: 85%; transform: translate(-50%, -50%);">
+    <img id="myImage4" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 30%; left: 60%; transform: translate(-50%, -50%);">
+    <img id="myImage5" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 14%; left: 80%; transform: translate(-50%, -50%);">
+    <img id="myImage6" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 34%; left: 23%; transform: translate(-50%, -50%);">
+    <img id="myImage7" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 74%; left: 33%; transform: translate(-50%, -50%);">
+    <img id="myImage8" src="弹窗.png" alt="Example Image" width= 2000px style="display: none; position: absolute; top: 90%; left: 63%; transform: translate(-50%, -50%);">
+
+    <h1 style="position:fixed; left:1620px; top:830px; font-size:10px; font-style:italic; font-weight: 50; color: #e3e3e3;">click me<h1></h1>
+
+
+
+
+<script>
+
+if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
+            .then(stream => {
+                document.querySelectorAll('.video-container video').forEach(video => {
+                    video.srcObject = stream;
+                });
+            })
+            .catch(error => {
+                console.error("Error accessing the camera", error);
+            });
+    }
+
+    // Click to hide/show the video containers
+    document.querySelectorAll('.video-container').forEach(container => {
+        container.addEventListener('click', () => {
+            container.style.display = container.style.display === 'none' ? 'flex' : 'none';
+        });
+    });
+
+    // Timers to initially display the video containers
+    setTimeout(() => { document.getElementById('MyImage').style.display = 'flex'; }, 10000);
+    setTimeout(() => { document.getElementById('MyImage2').style.display = 'flex'; }, 10371);
+    setTimeout(() => { document.getElementById('MyImage3').style.display = 'flex'; }, 10451);
+    setTimeout(() => { document.getElementById('MyImage4').style.display = 'flex'; }, 10855);
+    setTimeout(() => { document.getElementById('MyImage5').style.display = 'flex'; }, 10599);
+    setTimeout(() => { document.getElementById('MyImage6').style.display = 'flex'; }, 10345);
+    setTimeout(() => { document.getElementById('MyImage7').style.display = 'flex'; }, 10940);
+    setTimeout(() => { document.getElementById('MyImage8').style.display = 'flex'; }, 10801);
+
+
+    // 10 秒后显示图片
+    setTimeout(function() {
+        document.getElementById('myImage').style.display = 'block';
+    }, 10000); // 10000 毫秒 = 10 秒
+
+        // 10 秒后显示图片
+        setTimeout(function() {
+        document.getElementById('myImage2').style.display = 'block';
+    }, 10371); // 10000 毫秒 = 10 秒
+
+            // 10 秒后显示图片
+            setTimeout(function() {
+        document.getElementById('myImage3').style.display = 'block';
+    }, 10451); // 10000 毫秒 = 10 秒
+
+                // 10 秒后显示图片
+                setTimeout(function() {
+        document.getElementById('myImage4').style.display = 'block';
+    }, 10855); // 10000 毫秒 = 10 秒
+
+                    // 10 秒后显示图片
+                    setTimeout(function() {
+        document.getElementById('myImage5').style.display = 'block';
+    }, 10599); // 10000 毫秒 = 10 秒
+
+                        // 10 秒后显示图片
+                        setTimeout(function() {
+        document.getElementById('myImage6').style.display = 'block';
+    }, 10345); // 10000 毫秒 = 10 秒
+
+                            // 10 秒后显示图片
+                            setTimeout(function() {
+        document.getElementById('myImage7').style.display = 'block';
+    }, 10940); // 10000 毫秒 = 10 秒
+
+                                // 10 秒后显示图片
+                                setTimeout(function() {
+        document.getElementById('myImage8').style.display = 'block';
+    }, 10801); // 10000 毫秒 = 10 秒、
+
+
+     // 10 秒后显示图片
+         setTimeout(function() {
+         document.getElementById('myImage10').style.display = 'block';
+    }, 10); // 10000 毫秒 = 10 秒
+
+
+    // 10 秒后显示图片并添加点击事件监听器
+    setTimeout(function() {
+        // 获取所有图片元素
+        var images = document.querySelectorAll('img');
+
+        // 循环遍历所有图片元素
+        images.forEach(function(image) {
+            // 为每张图片添加点击事件监听器
+            image.addEventListener('click', function() {
+                // 切换图片的显示状态
+                if (image.style.display === 'none') {
+                    image.style.display = 'block'; // 如果隐藏，则显示图片
+                } else {
+                    image.style.display = 'none'; // 如果显示，则隐藏图片
+                }
+            });
+        });
+    }, 11000); // 10000 毫秒 = 10 秒
+
+
+    setTimeout(function() {
+    // 获取文本元素
+    var textElement = document.querySelector('h1');
+
+    // 添加鼠标悬停事件监听器
+    textElement.addEventListener('mouseenter', function() {
+        // 当鼠标悬停在文本上时，将鼠标样式设置为手型
+        textElement.style.cursor = 'pointer';
+    });
+
+    // 添加点击事件监听器
+    textElement.addEventListener('click', function() {
+        // 在点击文本时执行页面跳转操作
+        window.location.href = 'part4.html'; // 将 URL 替换为你想要跳转到的新页面的 URL
+    });
+}, 20000); // 延迟 20 秒显示文本
+
+
+</script>
+
+</body>
+
+
+</html>

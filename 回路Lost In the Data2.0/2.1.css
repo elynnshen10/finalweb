@@ -1,0 +1,40 @@
+
+    .gif {
+        width: auto; /* 调整所有GIF的基础宽度 */
+        height: auto; /* 保持GIF的宽高比 */
+        position: absolute; /* 允许我们通过top和left属性来定位GIF */
+    }
+  
+    
+    #gif1 {
+        width: 2000px;
+        top: 100px;
+        left: -200px;
+        z-index: 2; /* 控制层级 */
+    }
+    #gif2 {
+        width: 1200px;
+        top: 600px;
+        left: 600px;
+        z-index: 5;
+    }
+
+    #gif0 {
+        width: 1000px;
+        top: 0px;
+        left: 350px;
+        z-index: 3;
+    }
+    
+    #gif3 {
+        width: 1000px;
+        top: 80px;
+        left: -180px;
+        z-index: 4;
+    }
+    #gif4 {
+        width: 800px;
+        top: 220px;
+        left: 1000px;
+        z-index: 1;
+    }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.3.css"> <!-- 引入CSS样式 -->
+    <style>
+        #button-container {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* 根据需要调整宽度 */
+            text-align: center;
+        }
+        #enter-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="1.3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        
+        <h1><span class="type"></span></h1>
+    </div>
+    <div id="button-container"></div> <!-- 添加按钮容器 -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.type', {
+            strings: [
+                '欢迎','欢迎来到','欢迎来到认知体检中心','我们一向认为人类对信息的主动摄入等同于外置的脑机接口<br>大脑获得了什么，有怎样的转变其实都是由大脑的管理者决定的，即大脑生成的主观意识本身<br>而你<br>你作为这样一个主观意识，拥有着一个完整的大脑——<br>一个无比精妙的仪器',
+                '但<br>如果你真的完整地拥有着你的大脑<br>你为什么来到这里？<br>你的认知产生了一些不可控的变化对吗？<br>闭上眼<br>让我们进入你的大脑<br>共同寻找这一变化的根源..'
+            ],
+            typeSpeed: 100,
+            loop: false,
+            backSpeed: 10
+        });
+
+        // 等待33秒后显示按钮
+        setTimeout(function() {
+            var buttonContainer = document.getElementById('button-container');
+            var enterButton = document.createElement('button');
+            enterButton.id = 'enter-button';
+            enterButton.textContent = 'ENTER';
+            enterButton.onclick = function() {
+                // 点击按钮后跳转到下一页面
+                window.location.href = '2.1.html'; // 替换为实际的下一页面URL
+            };
+            buttonContainer.appendChild(enterButton);
+        }, 33000); // 33秒 = 33000毫秒
+    </script>
+</body>
+
+<audio id="myAudio" autoplay>
+    <source src="声希.mp3" type="audio/mpeg">
+    您的浏览器不支持 audio 标签。
+  </audio>
+  
+</html>
+
+

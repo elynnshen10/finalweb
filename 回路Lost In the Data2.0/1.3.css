@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #000000;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: 0;
+    align-items: 0;
+    color: #fff;
+  }
+  
+  .container h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  
+  .container h1 span {
+    color: #ffffff;
+  }
+
+
+  @font-face {
+    font-family: 'MyCustomFont'; /* 自定义字体名称 */
+    src: url('像素.TTF') format('truetype'); /* 字体文件路径 */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container h1, .container h1 span {
+    font-family: 'MyCustomFont', sans-serif; /* 应用自定义字体 */
+}

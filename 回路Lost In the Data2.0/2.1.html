@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动弹窗示例</title>
+    <link rel="stylesheet" href="2.1.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 3500px; /* 设置足够的高度以产生滚动条 */
+            overflow-y: scroll; /* 启用垂直滚动 */
+            background-image: url('2.1.jpg');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+
+            
+        
+        }
+        #popup {
+            display: none; /* 初始时隐藏弹窗 */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999; /* 确保弹窗在其他内容之上 */
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+<img src="孤勇者.gif"  class="gif" id="gif0" >
+    <img src="11.gif" class="gif" id="gif1">
+    <img src="22.gif" class="gif" id="gif2">
+    <img src="33.gif" class="gif" id="gif3">
+    <img src="44.gif" class="gif" id="gif4">
+
+<audio id="audio1"  autoplay>
+    <source src="2.1.mp3" type="audio/mpeg">
+    您的浏览器不支持audio元素。o/mpeg">
+    您的浏览器不支持audio元素。
+</audio>
+
+<div id="popup">
+   
+    <a href="part3.html">
+         <img class="_double-img_nhcgr_72" src="警报.gif" alt="第二张GIF图片" style="max-width: 100%; height: auto;">
+        </a>
+</div>
+
+<script>
+    // 等待30秒后弹出弹窗
+    setTimeout(function() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'block';
+
+        // 切换音频
+        var audio1 = document.getElementById('audio1');
+        audio1.pause(); // 暂停当前音频
+
+        // 播放新音频
+        var audio2 = new Audio('警报.mp3');
+        audio2.play();
+    }, 39000);
+</script>
+
+</body>
+</html>

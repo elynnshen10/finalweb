@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's on your mind</title>
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black; 
+        z-index: 10 ;/* 设置背景颜色为黑色 */
+    }
+    
+    /* 底下的 GIF 图片 */
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* 将图片放在最底层 */
+    }
+
+    /* 初始化文字的透明度为0 */
+    .fading-text {
+        position: fixed;
+        color: white; /* 修改字的颜色 */
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out; /* 添加渐变效果 */
+        z-index: 1; /* 确保文字在黑色背景之上 */
+        mix-blend-mode: difference;
+         /* 使用混合模式，使文字透出底下图片的颜色 */
+         transform: scale(0.6); /* 调整缩放比例，0.8 表示缩小到原来的 80% */
+         transform-origin: top right; /* 设置缩放的原点为左上角 */
+    }
+
+    /* 当鼠标悬停时将文字透明度设为1 */
+    .fading-text:hover {
+        opacity: 1;
+    }
+
+
+</style>
+</head>
+<body>
+    <img class="background-image" src="黑色乱码.gif" alt="Background Image">
+
+    <p class="fading-text" style="position:fixed; left:400px; top:1000px; font-size:40px; font-style:italic; font-weight: 200";>命运的齿轮开始转动</h2>
+    <p class="fading-text" style="position:fixed; left:300px; top:1000px; font-size:40px; font-style:italic; font-weight: 200";>我勒个豆</h2>
+ <p class="fading-text" style="position:fixed; left:900px; top:200px; font-size:60px; font-style:italic; font-weight: 200";>退！退！退！</h2>
+<p class="fading-text" style="position:fixed; left:1200px; top:800px; font-size:60px; font-style:italic; font-weight: 200";>芜湖</h2>
+<p class="fading-text" style="position:fixed; left:450px; top:860px; font-size:60px; font-style:italic; font-weight: 200";>yyds</h2>
+<p class="fading-text" style="position:fixed; left:500px; top:320px; font-size:60px; font-style:italic; font-weight: 200";>南方小土豆</h2>
+<p class="fading-text" style="position:fixed; left:240px; top:450px; font-size:60px; font-style:italic; font-weight: 200";>完颜慧德</h2>
+<p class="fading-text" style="position:fixed; left:200px; top:780px; font-size:60px; font-style:italic; font-weight: 200";>哈基米</h2>
+<p class="fading-text" style="position:fixed; left:820px; top:560px; font-size:60px; font-style:italic; font-weight: 200";>汗流浃背了</h2>
+<p class="fading-text" style="position:fixed; left:273px; top:380px; font-size:60px; font-style:italic; font-weight: 200";>鸡哔你</h2>
+<p class="fading-text" style="position:fixed; left:948px; top:950px; font-size:60px; font-style:italic; font-weight: 200";>家人们谁懂啊</h2>
+<p class="fading-text" style="position:fixed; left:200px; top:260px; font-size:60px; font-style:italic; font-weight: 200";>我在xx很想你</h2>
+<p class="fading-text" style="position:fixed; left:245px; top:840px; font-size:40px; font-style:italic; font-weight: 200";>纯爱战神</h2>
+<p class="fading-text" style="position:fixed; left:948px; top:560px; font-size:60px; font-style:italic; font-weight: 200";>不是xx买不起，而是xx更有性价比</h2>
+<p class="fading-text" style="position:fixed; left:813px; top:200px; font-size:40px; font-style:italic; font-weight: 200";>质疑xx，理解xx，成为xx</h2>
+<p class="fading-text" style="position:fixed; left:491px; top:1000px; font-size:60px; font-style:italic; font-weight: 200";>这一生如履薄冰</h2>
+<p class="fading-text" style="position:fixed; left:230px; top:900px; font-size:40px; font-style:italic; font-weight: 200";>凡尔赛</h2>
+<p class="fading-text" style="position:fixed; left:459px; top:1200px; font-size:60px; font-style:italic; font-weight: 200";>显眼包</h2>
+<p class="fading-text" style="position:fixed; left:382px; top:1300px; font-size:60px; font-style:italic; font-weight: 200";>破防</h2>
+<p class="fading-text" style="position:fixed; left:200px; top:1400px; font-size:60px; font-style:italic; font-weight: 200";>注意看，这个女人叫小美</h2>
+<p class="fading-text" style="position:fixed; left:1500px; top:1300px; font-size:60px; font-style:italic; font-weight: 200";>注意看，这个男人叫小帅</h2>
+<p class="fading-text" style="position:fixed; left:1700px; top:1350px; font-size:60px; font-style:italic; font-weight: 200";>这是一个lonely的问题</h2>
+<p class="fading-text" style="position:fixed; left:2500px; top:1200px; font-size:60px; font-style:italic; font-weight: 200";>一问一个不吱声</h2>
+<p class="fading-text" style="position:fixed; left:1870px; top:1230px; font-size:40px; font-style:italic; font-weight: 200";>i人的安全感是e人给的</h2>
+<p class="fading-text" style="position:fixed; left:1100px; top:1020px; font-size:60px; font-style:italic; font-weight: 200";>i人是我们e人的玩具</h2>
+ <p class="fading-text" style="position:fixed; left:1200px; top:740px; font-size:60px; font-style:italic; font-weight: 200";>尊嘟假嘟</h2>
+<p class="fading-text" style="position:fixed; left:1030px; top:230px; font-size:60px; font-style:italic; font-weight: 200";>又幸福了姐</h2>
+ <p class="fading-text" style="position:fixed; left:650px; top:1000px; font-size:60px; font-style:italic; font-weight: 200";>黄龙江一派全带蓝牙</h2>
+<p class="fading-text" style="position:fixed; left:760px; top:450px; font-size:40px; font-style:italic; font-weight: 200";>你有这么高速运转的机械进入中国，记得我给出的原理</h2>
+<p class="fading-text" style="position:fixed; left:840px; top:700px; font-size:40px; font-style:italic; font-weight: 200";>真正的心寒，不是大吵大闹</h2>
+ <p class="fading-text" style="position:fixed; left:450px; top:600px; font-size:60px; font-style:italic; font-weight: 200";>所以爱会消失对吗</h2>
+  <p class="fading-text" style="position:fixed; left:890px; top:380px; font-size:60px; font-style:italic; font-weight: 200";>发疯文学</h2>
+    <p class="fading-text" style="position:fixed; left:1650px; top:180px; font-size:60px; font-style:italic; font-weight: 200";>citywalk</h2>
+        <p class="fading-text" style="position:fixed; left:1790px; top:580px; font-size:60px; font-style:italic; font-weight: 200";>栓q</h2>
+            <p class="fading-text" style="position:fixed; left:1640px; top:280px; font-size:60px; font-style:italic; font-weight: 200";>刘耕宏女孩</h2>
+                <p class="fading-text" style="position:fixed; left:1470px; top:380px; font-size:60px; font-style:italic; font-weight: 200";>v我50</h2>
+                    <p class="fading-text" style="position:fixed; left:1470px; top:780px; font-size:60px; font-style:italic; font-weight: 200";>duck不必</h2>
+                        <p class="fading-text" style="position:fixed; left:2150px; top:480px; font-size:60px; font-style:italic; font-weight: 200";>泰裤辣</h2>
+                            <p class="fading-text" style="position:fixed; left:2000px; top:1180px; font-size:60px; font-style:italic; font-weight: 200";>笑拥了</h2>
+                                <p class="fading-text" style="position:fixed; left:1970px; top:1280px; font-size:60px; font-style:italic; font-weight: 200";>vocal</h2>
+                                    <p class="fading-text" style="position:fixed; left:1890px; top:780px; font-size:60px; font-style:italic; font-weight: 200";>告诉老默，我想吃鱼了</h2>
+                                        <p class="fading-text" style="position:fixed; left:2090px; top:580px; font-size:60px; font-style:italic; font-weight: 200";>大学生特种兵旅游</h2>
+                                            <p class="fading-text" style="position:fixed; left:1990px; top:480px; font-size:60px; font-style:italic; font-weight: 200";>绝望的文盲</h2>
+                                                <p class="fading-text" style="position:fixed; left:1790px; top:1280px; font-size:60px; font-style:italic; font-weight: 200";>依托答辩</h2>
+                                                    <p class="fading-text" style="position:fixed; left:2090px; top:2080px; font-size:60px; font-style:italic; font-weight: 200";>芭比q了</h2>
+                                                        <p class="fading-text" style="position:fixed; left:2060px; top:1480px; font-size:60px; font-style:italic; font-weight: 200";>你算是踢到棉花拉</h2>
+                                                            <p class="fading-text" style="position:fixed; left:2360px; top:1680px; font-size:60px; font-style:italic; font-weight: 200";>3，2，1，上链接！</h2>
+                                                                <p class="fading-text" style="position:fixed; left:260px; top:680px; font-size:60px; font-style:italic; font-weight: 200";>x老师退出文坛我是极力反对的</h2>
+                                                                    <p class="fading-text" style="position:fixed; left:2360px; top:280px; font-size:60px; font-style:italic; font-weight: 200";>杀我别用xx刀</h2>
+                                                                        <p class="fading-text" style="position:fixed; left:2460px; top:580px; font-size:60px; font-style:italic; font-weight: 200";>dame</h2>
+                                                                            <p class="fading-text" style="position:fixed; left:2360px; top:1380px; font-size:60px; font-style:italic; font-weight: 200";>疯狂星期四</h2>
+                                                                                <p class="fading-text" style="position:fixed; left:2660px; top:1780px; font-size:60px; font-style:italic; font-weight: 200";>破天的富贵</h2>
+
+
+                                                                                  <p class="fading-text" style="position:fixed; left:2560px; top:580px; font-size:60px; font-style:italic; font-weight: 200";>家人们谁懂啊</h2>
+</body>
+</html>
